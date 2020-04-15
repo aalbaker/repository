@@ -30,10 +30,6 @@
             "defaultValue": "notmyfaoultdomain",
             "type": "String"
         },
-        "virtualMachines_albakerserverfronend_name": {
-            "defaultValue": "albakerserverfronend",
-            "type": "String"
-        },
         "networkInterfaces_albakerbackend1832_name": {
             "defaultValue": "albakerbackend1832",
             "type": "String"
