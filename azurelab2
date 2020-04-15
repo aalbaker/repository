@@ -282,27 +282,6 @@
             }
         },
         {
-            "type": "Microsoft.Compute/availabilitySets",
-            "apiVersion": "2019-07-01",
-            "name": "[parameters('availabilitySets_notmyfaoultdomain_name')]",
-            "location": "[resourceGroup().location]",
-            "dependsOn": [
-                "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_albakerserverfronend_name'))]"
-            ],
-            "sku": {
-                "name": "Aligned"
-            },
-            "properties": {
-                "platformUpdateDomainCount": 5,
-                "platformFaultDomainCount": 2,
-                "virtualMachines": [
-                    {
-                        "id": "[resourceId('Microsoft.Compute/virtualMachines', parameters('virtualMachines_albakerserverfronend_name'))]"
-                    }
-                ]
-            }
-        },
-        {
             "type": "Microsoft.Network/networkSecurityGroups/securityRules",
             "apiVersion": "2019-11-01",
             "name": "[concat(parameters('networkSecurityGroups_albakerbackend1_nsg_name'), '/SSH')]",
